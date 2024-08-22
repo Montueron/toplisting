@@ -51,3 +51,21 @@ spec:
     - listings-importer-events
     - customer-service-harmonized-events
     - search-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: pricing-api
+  description: The Pricing REST API
+  tags:
+    - api
+  links:
+    - url: https://github.com/smg-real-estate/pricing-api/blob/main/openapi.yml
+      title: GitLab Repo
+      icon: gitlab
+spec:
+  type: openapi
+  lifecycle: production
+  owner: pinkpanthers
+  definition:
+    $text: https://github.com/smg-real-estate/pricing-api/blob/main/openapi.yml
