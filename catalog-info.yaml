@@ -1,0 +1,80 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: smg-real-estate/toplisting-service
+    github.com/team-slug: orgs/smg-real-estate/teams/flyingpenguins
+    sonarqube.org/project-key: homegate_toplisting-service
+  name: toplisting-service
+  description: Manages booking status of toplisting
+  links:
+    - url: https://github.com/smg-real-estate/toplisting-service/
+      title: GitHub Repo
+      icon: github
+spec:
+  type: service
+  lifecycle: production
+  owner: flyingpenguins
+  providesApis:
+    - toplisting-service-api
+    - toplisting-service-harmonized-events
+    - toplisting-service-unified-events
+  consumesApis:
+    - listings-importer-events
+    - customer-service-harmonized-events
+    - search-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: toplisting-service-api
+  description: The Toplisting Service REST API
+  tags:
+    - api
+  links:
+    - url: https://github.com/smg-real-estate/toplisting-service/blob/main/openapi.yml
+      title: GitHub Repo
+      icon: github
+spec:
+  type: openapi
+  lifecycle: production
+  owner: flyingpenguins
+  definition:
+    $text: https://github.com/smg-real-estate/toplisting-service/blob/main/openapi.yml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: toplisting-service-harmonized-events
+  description: Harmonized Toplisting Events
+  tags:
+    - events
+  links:
+    - url: https://github.com/smg-real-estate/toplisting-service/blob/main/HarmonizedToplistingEvent.asyncapi.yml
+      title: GitHub Repo
+      icon: github
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: flyingpenguins
+  definition:
+    $text: https://github.com/smg-real-estate/toplisting-service/blob/main/HarmonizedToplistingEvent.asyncapi.yml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: toplisting-service-unified-events
+  description: Unified Toplisting Events
+  tags:
+    - events
+  links:
+    - url: https://github.com/smg-real-estate/toplisting-service/blob/main/UnifiedToplistingEvent.asyncapi.yml
+      title: GitHub Repo
+      icon: github
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: flyingpenguins
+  definition:
+    $text: https://github.com/smg-real-estate/toplisting-service/blob/main/UnifiedToplistingEvent.asyncapi.yml
