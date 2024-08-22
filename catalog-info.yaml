@@ -7,7 +7,7 @@ metadata:
     github.com/team-slug: orgs/smg-real-estate/teams/flyingpenguins
     sonarqube.org/project-key: homegate_toplisting-service
   name: toplisting-service
-  description: Manages booking status of toplisting
+  description: Manages booking status of toplisting, changed description
   links:
     - url: https://github.com/smg-real-estate/toplisting-service/
       title: GitHub Repo
