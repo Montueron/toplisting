@@ -25,6 +25,7 @@ spec:
     - customer-service-harmonized-events
     - search-api
 ---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   annotations:
