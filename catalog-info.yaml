@@ -5,6 +5,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: smg-real-estate/toplisting-service
     github.com/team-slug: orgs/smg-real-estate/teams/flyingpenguins
+    datadoghq.com/dashboard-url: https://p.datadoghq.eu/sb/7z71jm4x41vtuvdw-68dad063201bc67e4ab0e7b8cc0dd092
     sonarqube.org/project-key: homegate_toplisting-service
   name: toplisting-service
   description: Manages booking status of toplisting, changed description, changed again bbbbbb
